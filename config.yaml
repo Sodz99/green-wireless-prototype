@@ -1,0 +1,34 @@
+# Green AI Wireless Prototype Configuration
+# RF Modulation Classification - 4 Classes
+
+# Dataset Configuration
+batch_size: 64
+num_workers: 4
+num_classes: 4
+
+# Model Configuration
+dropout: 0.3
+input_channels: 2
+sequence_length: 2048
+
+# Training Configuration
+learning_rate: 0.001
+weight_decay: 0.0001
+max_epochs: 50
+patience: 5
+
+# Knowledge Distillation
+temperature: 4.0
+alpha: 0.6  # Weight for distillation loss
+
+# Pruning Configuration
+pruning_ratio: 0.5  # 50% sparsity
+pruning_structured: false
+
+# ONNX Export Configuration
+onnx_opset_version: 11
+dynamic_axes: true
+
+# Quantization Configuration
+quantization_method: 'dynamic'  # 'dynamic' or 'static'
+calibration_samples: 200

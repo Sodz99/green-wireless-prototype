@@ -1,0 +1,54 @@
+seed: 42
+device: cuda                        # enforce GPU only
+task: modulation_classification
+classes: [BPSK, QPSK, PSK8, QAM16]
+sample_len: 2048
+channels: 2
+snr_db: [0, 5, 10, 20]
+freq_offset_hz: 100.0
+phase_jitter_std: 0.05
+train_n: 12000
+val_n: 2000
+test_n: 2000
+
+# training
+batch_size: 128
+num_workers: 2
+
+teacher:
+  epochs: 6
+  lr: 0.001
+  weight_decay: 0.0001
+  conv_channels: [64, 128, 256]
+  kernel_sizes: [7, 5, 3]
+  strides: [2, 2, 2]
+  dropout: 0.1
+
+student:
+  epochs: 6
+  lr: 0.001
+  weight_decay: 0.0001
+  conv_channels: [32, 64, 128]
+  kernel_sizes: [7, 5, 3]
+  strides: [2, 2, 2]
+  dropout: 0.1
+
+kd:
+  enable: true
+  temperature: 4.0
+  alpha: 0.6            # KD loss weight (soft targets); (1-alpha) for CE
+
+pruning:
+  enable: true
+  amount: 0.5           # 50% L1 unstructured on Linear
+  finetune_epochs: 2
+  finetune_lr: 0.0005
+
+onnx:
+  opset: 13
+
+benchmark:
+  runs: 1000
+  warmup: 50
+  cpu_intraop_threads: 1
+  cpu_interop_threads: 1
