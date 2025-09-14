@@ -4,11 +4,11 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.2.2-red.svg)](https://pytorch.org/)
 [![ONNX](https://img.shields.io/badge/ONNX-1.16.0-green.svg)](https://onnx.ai/)
 
-> **Complete Green AI pipeline for wireless communication systems** - Demonstrating 7.7× model compression, 15.5× inference speedup, and 70%+ additional size reduction through quantization while maintaining superior accuracy.
+> **Complete model compression pipeline for wireless communication systems** - Demonstrating 7.7× model compression, 15.5× inference speedup, and 70%+ additional size reduction through quantization while maintaining superior accuracy.
 
 ## 🎯 Executive Summary
 
-This project showcases the practical application of **Green AI techniques** to wireless communication systems, specifically RF modulation classification. By implementing knowledge distillation, magnitude-based pruning, ONNX Runtime deployment, and successful INT8 quantization, we achieved remarkable compression and speed improvements while maintaining or even improving model accuracy.
+This project showcases the practical application of **model compression techniques** to wireless communication systems, specifically RF modulation classification. By implementing knowledge distillation, magnitude-based pruning, ONNX Runtime deployment, and successful INT8 quantization, we achieved remarkable compression and speed improvements while maintaining or even improving model accuracy.
 
 **Key Achievements:**
 - 🚀 **7.7× model compression** (142K → 18K parameters)
