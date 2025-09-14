@@ -16,7 +16,7 @@ This project showcases the practical application of **Green AI techniques** to w
 - 🎯 **98.6% test accuracy** (vs 94.15% baseline)
 - 🔄 **70-74% additional size reduction** via INT8 quantization
 - 📦 **0.04 MB ultra-compact models** for edge deployment
-- 🌱 **Complete Green AI pipeline** for environmental sustainability
+- 🌱 **Complete model compression pipeline** for environmental sustainability
 
 ---
 
